@@ -15,6 +15,57 @@ an e‑bike mid‑drive platform developed by DJI / SZ Avinox Innovation Co., Lt
 
 ---
 
+## In plain English (if you're not technical)
+
+**What is this?** Avinox Ride is the phone app that pairs with an Avinox‑powered e‑bike (the motor
+system is made by DJI, the drone company). This write‑up looks at what the app *can* do on your phone
+and bike, before deciding whether to install it. Think of it as reading the ingredients label.
+
+**Is it safe to install?** It looks like a genuine, properly‑built app from the real manufacturer —
+not a fake or obvious malware. It even has tamper protection that stops modified copies from running.
+So the basics are fine. The concerns below are about **privacy and control**, not a virus.
+
+**The main things worth knowing:**
+
+- **It carries "extra passengers."** Mixed into the app are several advertising/notification
+  components made by Chinese tech companies (the biggest is one called *Getui*). Their code is
+  *capable* of gathering a lot about your phone — the list of other apps you have installed, nearby
+  Wi‑Fi networks, your location, and device ID numbers. We can't prove from the outside how much it
+  actually sends, and modern Android blocks a chunk of it, but the capability is in there, and the
+  company's own privacy policy never mentions these components by name.
+
+- **Your bike has a "remote off switch."** If your bike has a SIM card in it (like a phone's SIM),
+  the motor can be locked or shut off remotely over the mobile network. This is mainly an *anti‑theft*
+  feature you control — if your bike is stolen, you can "mark it as lost" and the motor stops helping
+  anyone else, which is genuinely useful. The flip side: the manufacturer's servers technically *could*
+  switch off your motor too, and if someone broke into your account they could lock your bike. It
+  doesn't make the bike undrivable — you can still pedal it like a normal (heavy) bike — it just stops
+  the electric assist.
+
+- **You can unplug the "tracking."** That SIM card is one you insert yourself, and there's an off
+  switch in the app. **Take the SIM out (or leave it out) and the remote tracking and remote off‑switch
+  stop working** — the app still runs your bike fine over Bluetooth when your phone is nearby. The only
+  thing you lose is remote features like auto‑uploading rides and finding the bike if it's stolen. It's
+  a trade‑off between privacy and theft‑recovery, and it's your choice.
+
+- **The fine print doesn't match the app.** The company's Privacy Policy and Terms don't mention the
+  SIM, the remote off‑switch, the anti‑theft tracking, or those Chinese data components at all. They're
+  also a Shenzhen (China) company, and the Terms cap what they'd ever owe you at **\$100**. None of that
+  is unusual for this kind of product, but you should go in knowing it.
+
+**What should a normal person do?** You can use the app — just be a little deliberate:
+1. Install it from the official Google Play Store (or Apple's App Store), not from random websites.
+2. When it asks for permissions, allow Location "only while using the app," allow Bluetooth, and
+   **say no to the "Phone" permission** and to any "help us improve the product" / analytics prompts.
+3. Decide whether you want the bike's SIM in at all. Leave it out if you don't care about remote
+   tracking; put it in if theft‑recovery matters more to you than privacy.
+4. Protect the email/phone number you use for your Avinox account — that account is the "key" to the
+   bike's lock.
+
+The rest of this document is the technical evidence behind these points.
+
+---
+
 ## App under review
 
 | | |
