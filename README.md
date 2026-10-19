@@ -305,7 +305,36 @@ China — even though much of that collection is dormant outside China or blocke
 6. **Network:** optionally monitor/block `*.getui.com`, `*.getui.net`, `*.gepush.com`,
    `*.mobileservice.cn`, and `statistical-report.djiservice.org` at the DNS level and confirm pairing
    still works.
-7. Consider a **work profile** (e.g. Shelter/Insular) to limit the push SDKs' view of your other apps.
+7. **Isolate the app in a work profile (optional, strongest privacy step).**
+
+   Android lets you create a separate, sandboxed "work profile" on the same phone. Apps inside it run
+   under a *different* user identity and **cannot see the apps, accounts, files, or most data in your
+   main (personal) profile** — the OS enforces the wall, not the app. Putting Avinox Ride (and its
+   bundled Chinese push/ID SDKs) inside a work profile means their "which other apps are installed"
+   and cross‑app snooping capabilities see only an almost‑empty profile, and you can **"freeze"
+   (fully suspend)** the app when you're not riding so its background services can't run at all.
+
+   You don't need a company/employer or a rooted phone — a free, open‑source app sets this up for you:
+
+   - **Shelter** (the simplest option) — creates the work profile and lets you clone, isolate, and
+     freeze apps.
+     - F‑Droid listing: <https://f-droid.org/packages/net.typeblog.shelter/>
+     - Source & README (setup notes, caveats): <https://github.com/PeterCxy/Shelter>
+   - **Insular** — an alternative with similar "island" isolation:
+     <https://f-droid.org/packages/com.oasisfeng.island.fdroid/>
+   - A plain‑language walkthrough of the idea and setup:
+     <https://www.mgillion.be/articles/09-05-2025.html>
+
+   **Rough procedure with Shelter:** install [F‑Droid](https://f-droid.org/) → install Shelter from it
+   → open Shelter and follow the wizard to **set up the work profile** (read the wizard's caveats) →
+   in Shelter, install Avinox Ride *into the work profile* (or clone it there and remove the personal
+   copy) → sign in and use it there → tap the app in Shelter and choose **Freeze** when you're done, so
+   it stays dormant until you next unfreeze it.
+
+   Caveats: notifications/background sync behave differently for frozen apps (you may need to unfreeze
+   before a ride to pair or sync), and Shelter is only as strong as your Android version's work‑profile
+   implementation. For most people the deliberate‑permissions approach in steps 2–3 is enough; the work
+   profile is for those who want hard isolation.
 
 ---
 
